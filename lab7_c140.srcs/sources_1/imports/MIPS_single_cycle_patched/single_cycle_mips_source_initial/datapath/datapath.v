@@ -62,43 +62,14 @@ module datapath (
             .y              (bta)
         );
 
-    mux2 #(32) pc_src_mux (
-            .sel            (pc_src),
-            .a              (pc_plus4),
-            .b              (bta),
-            .y              (pc_pre)
-        );
-
-    mux2 #(32) pc_jmp_mux (
-            .sel            (jump),
-            .a              (pc_pre),
-            .b              (jta),
-            .y              (pc_bjn)
-        );
-        
-        
-    mux2 #(32) pc_jra_mux (
-            .sel            (jra),
-            .a              (pc_bjn),
-            .b              (alu_pa),
-            .y              (pc_next)
-        );
+    assign pc_pre = pc_src ? bta : pc_plus4;
+    assign pc_bjn = jump ? jta : pc_pre;
+    assign pc_next = jra ? alu_pa : pc_bjn;
 
     // --- RF Logic --- //
-    mux2 #(5) rf_wa_mux (
-            .sel            (reg_dst),
-            .a              (instr[20:16]),
-            .b              (instr[15:11]),
-            .y              (rf_addr)
-        );
-        
-    mux2 #(5) rf_wa_mux2 (
-            .sel            (rd_pc4),
-            .a              (rf_addr),
-            .b              (31),
-            .y              (rf_wa)
-        );
-
+    assign rf_addr = reg_dst ? instr[15:11] : instr[20:16];
+    assign rf_wa = rd_pc4 ? 31 : rf_addr;
+    
     regfile rf (
             .clk            (clk),
             .we             (we_reg),
@@ -119,12 +90,7 @@ module datapath (
         );
 
     // --- ALU Logic --- //
-    mux2 #(32) alu_pb_mux (
-            .sel            (alu_src),
-            .a              (wd_dm),
-            .b              (sext_imm),
-            .y              (alu_pb)
-        );
+    assign alu_pb = alu_src ? sext_imm : wd_dm;
 
     alu alu (
             .clk            (clk),
@@ -137,18 +103,6 @@ module datapath (
         );
 
     // --- MEM Logic --- //
-    mux2 #(32) rf_wd_mux (
-            .sel            (dm2reg),
-            .a              (alu_out),
-            .b              (rd_dm),
-            .y              (out_data)
-        );
-       
-    mux2 #(32) wd_mux (
-            .sel            (rd_pc4),
-            .a              (out_data),
-            .b              (pc_plus4),
-            .y              (wd_rf)
-        );
-
+    assign out_data = dm2reg ? rd_dm : alu_out;
+    assign wd_rf = rd_pc4 ? pc_plus4 : out_data;
 endmodule

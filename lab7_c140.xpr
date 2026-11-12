@@ -100,6 +100,15 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/imports/MIPS_single_cycle_patched/single_cycle_mips_source_initial/control_unit/auxdec.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/lab7/MIPS_single_cycle_patched/single_cycle_mips_source_initial/control_unit/auxdec.v"/>
+          <Attr Name="ImportTime" Val="1529302800"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/imports/MIPS_single_cycle_patched/validation_wrapper/button_debouncer.v">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/lab7/MIPS_single_cycle_patched/validation_wrapper/button_debouncer.v"/>
@@ -113,6 +122,15 @@
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/lab7/MIPS_single_cycle_patched/validation_wrapper/clk_gen.v"/>
           <Attr Name="ImportTime" Val="1529896826"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/MIPS_single_cycle_patched/single_cycle_mips_source_initial/control_unit/controlunit.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/lab7/MIPS_single_cycle_patched/single_cycle_mips_source_initial/control_unit/controlunit.v"/>
+          <Attr Name="ImportTime" Val="1532882706"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -184,6 +202,15 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/imports/MIPS_single_cycle_patched/single_cycle_mips_source_initial/control_unit/maindec.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/lab7/MIPS_single_cycle_patched/single_cycle_mips_source_initial/control_unit/maindec.v"/>
+          <Attr Name="ImportTime" Val="1529302754"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/imports/MIPS_single_cycle_patched/single_cycle_mips_source_initial/mips/mips.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -242,41 +269,11 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/MIPS_single_cycle_patched/single_cycle_mips_source_initial/control_unit/auxdec.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/lab7/MIPS_single_cycle_patched/single_cycle_mips_source_initial/control_unit/auxdec.v"/>
-          <Attr Name="ImportTime" Val="1529302800"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/MIPS_single_cycle_patched/single_cycle_mips_source_initial/control_unit/controlunit.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/lab7/MIPS_single_cycle_patched/single_cycle_mips_source_initial/control_unit/controlunit.v"/>
-          <Attr Name="ImportTime" Val="1532882706"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/MIPS_single_cycle_patched/single_cycle_mips_source_initial/datapath/datapath.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/lab7/MIPS_single_cycle_patched/single_cycle_mips_source_initial/datapath/datapath.v"/>
           <Attr Name="ImportTime" Val="1571709198"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/MIPS_single_cycle_patched/single_cycle_mips_source_initial/control_unit/maindec.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/lab7/MIPS_single_cycle_patched/single_cycle_mips_source_initial/control_unit/maindec.v"/>
-          <Attr Name="ImportTime" Val="1529302754"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>

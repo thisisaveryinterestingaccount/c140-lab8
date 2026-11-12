@@ -35,7 +35,7 @@ module mips (
     wire [31:0] rd1_id;
     wire [31:0] rd2_id;
     wire [31:0] imm_id;
-    wire [4:0] alu_op_id;
+    wire [3:0] alu_op_id;
     wire [4:0] shamt_id;
     wire mem_we_id;
     wire reg_we_id;
@@ -63,7 +63,7 @@ module mips (
     wire [31:0] rd2_ex;
     wire [31:0] imm_ex;
     wire [31:0] pc_plus4_ex;
-    wire [4:0] alu_op_ex;
+    wire [3:0] alu_op_ex;
     wire [4:0] shamt_ex;
     wire mem_we_ex;
     wire reg_we_ex;

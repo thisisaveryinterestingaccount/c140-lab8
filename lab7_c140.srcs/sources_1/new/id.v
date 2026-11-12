@@ -34,6 +34,7 @@ module id(
     output [31:0] imm,
     output [4:0]  shamt,
     output [4:0] alu_op,
+    output reg [1:0] rf_src,
     output mem_we,
     output reg_we_later,
     output alu_dst,
@@ -41,7 +42,8 @@ module id(
     output jr,
     output branch,
     output pc_we,
-    output jump
+    output jump,
+    output we_dm
     );
     wire reg_dst;
     wire rf_we;
@@ -68,11 +70,30 @@ module id(
       .wa(wa),
       .wd(reg_wd)
     );
-    
-    control_unit cu(
+    wire rd_pc4;
+    wire dm2reg;
+    controlunit cu(
         .opcode(instr[31:26]),
         .funct(instr[5:0]),
         .branch(branch),
-        .jump(jump)
+        .jump(jump),
+        .reg_dst(reg_dst),
+        .we_reg(reg_we_later),
+        .alu_src(alu_src),
+        .we_dm(we_dm),
+        .dm2reg(dm2reg),
+        .jra(jr),
+        .rd_pc4(rd_pc4),
+        .alu_ctrl(alu_op)
     );
+    
+    always @(*) begin
+      if(dm2reg) begin
+        rf_src = 1;
+      end else if(rd_pc4) begin
+        rf_src = 2;
+      end else begin
+        rf_src = 0;
+      end
+    end
 endmodule

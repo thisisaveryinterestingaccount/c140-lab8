@@ -25,7 +25,7 @@ module auxdec (
                 6'b01_0010: ctrl = 'b0100_0_1; // MFLO
                 6'b00_0000: ctrl = 'b1001_0_1; // SLL
                 6'b00_0010: ctrl = 'b1000_0_1; // SRL
-                6'b00_1000: ctrl = 'b0000_1_0; // JRA
+                6'b00_1000: ctrl = 'b0000_1_0; // JR
                 default:    ctrl = 'bxxxx_x_x;
             endcase
         endcase

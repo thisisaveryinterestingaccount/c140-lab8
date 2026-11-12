@@ -24,11 +24,11 @@ module wb(
         input [31:0] alu_out,
         input [31:0] d_mem,
         input [31:0] pc_plus4,
-        input [1:0] src,
+        input [1:0] rf_src,
         output reg [31:0] wd
     );
     always @(*)begin
-    case(src)
+    case(rf_src)
       0: wd = alu_out;
       1: wd = d_mem;
       2: wd = pc_plus4;

@@ -1,5 +1,6 @@
 module alu (
         input wire clk,
+        input wire  we,
         input  wire [3:0]  op,
         input  wire [31:0] a,
         input  wire [31:0] b,
@@ -27,9 +28,8 @@ module alu (
     end
     
     always @(posedge clk) begin
-        if (op == 4'b0011)
+        if (op == 4'b0011 & we)
             hilo = y;
-       
     end
 
 endmodule

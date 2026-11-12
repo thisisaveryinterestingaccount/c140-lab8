@@ -8,8 +8,8 @@ module controlunit (
         output wire        alu_src,
         output wire        we_dm,
         output wire        dm2reg,
-        output  wire        jra,
-        output  wire        rd_pc4,
+        output wire        jra,
+        output wire        rd_pc4,
         output wire [3:0]  alu_ctrl
     );
     

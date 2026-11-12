@@ -21,7 +21,7 @@ module mips_top (
             .rd_dm          (rd_dm),
             .we_dm          (we_dm),
             .pc_current     (pc_current),
-            .alu_out        (alu_out),
+            .a_dm        (alu_out),
             .wd_dm          (wd_dm),
             .rd3            (rd3)
         );
